@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Kumbh+Sans:wght@300;400;500;600;700;800;900&family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@300;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  /* main background */
+  --very-dark-desaturated-blue: hsl(222, 26%, 31%);
+
+  /* toggle background, keypad background */
+  /* --very-dark-desaturated-blue: hsl(223, 31%, 20%); */
+
+  /* screen background */
+  /* --very-dark-desaturated-blue: hsl(224, 36%, 15%); */
+
+  /* #### Keys */
+
+  /* key background */
+  --desaturated-dark-blue: hsl(225, 21%, 49%);
+
+  /* key shadow */
+  --desaturated-dark-blue: hsl(224, 28%, 35%);
+
+  /* key background, toggle */
+  --red: hsl(6, 63%, 50%);
+
+  /* key shadow */
+  --dark-red: hsl(6, 70%, 34%);
+
+  /* key background */
+  --light-grayish-orange: hsl(30, 25%, 89%);
+
+  /* key shadow */
+  --grayish-orange: hsl(28, 16%, 65%);
+
+  /* #### Text */
+
+  --very-dark-grayish-blue: hsl(221, 14%, 31%);
+  --white: hsl(0, 0%, 100%);
+
+  /* ### Theme 2 */
+
+  /* #### Backgrounds */
+
+  /* main background) */
+  --light-gray: hsl(0, 0%, 90%);
+
+  /* toggle background, keypad background */
+  --grayish-red: hsl(0, 5%, 81%);
+
+  /* screen background */
+  --very-light-gray: hsl(0, 0%, 93%);
+
+  /* #### Keys */
+
+  /* key background */
+  --dark-moderate-cyan: hsl(185, 42%, 37%);
+
+  /* key shadow */
+  --very-dark-cyan: hsl(185, 58%, 25%);
+
+  /* key background, toggle */
+  --orange: hsl(25, 98%, 40%);
+
+  /* key shadow) */
+  --dark-orange: hsl(25, 99%, 27%);
+
+  /* key background */
+  --light-grayish-yellow: hsl(45, 7%, 89%);
+
+  /* key shadow) */
+  --dark-grayish-orange: hsl(35, 11%, 61%);
+
+  /* #### Text */
+
+  --very-dark-grayish-yellow: hsl(60, 10%, 19%);
+  --white: hsl(0, 0%, 100%);
+
+  /* ### Theme 3 */
+
+  /* #### Backgrounds */
+  /* main background */
+  --very-dark-violet: hsl(268, 75%, 9%);
+
+  /* (toggle background, keypad background, screen background) */
+  /* --very-dark-violet : hsl(268, 71%, 12%); */
+
+  /* #### Keys */
+
+  /* -(key background) */
+  --dark-violet: hsl(281, 89%, 26%);
+
+  /* key shadow) */
+  --vivid-magenta: hsl(285, 91%, 52%);
+
+  /* key background, toggle */
+  --pure-cyan: hsl(176, 100%, 44%);
+
+  /* (key shadow) */
+  --soft-cyan: hsl(177, 92%, 70%);
+
+  /* key background */
+
+  /* -very-dark-violet: hsl(268, 47%, 21%); */
+  --dark-magenta: hsl(290, 70%, 36%);
+
+  /* #### Text */
+
+  --light-yellow: hsl(52, 100%, 62%);
+  --very-dark-blue: hsl(198, 20%, 13%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  font-size: 16px;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  font-size: 2rem;
+}
+
+.calc-app {
+  background: var(--very-dark-desaturated-blue);
+  width: 100%;
+  height: 100dvh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calc-area {
+  width: 27%;
+  height: 80dvh;
+
+  @media (max-width: 1550px) {
+    width: 35%;
+  }
+
+  @media (max-width: 1200px) {
+    width: 42%;
+  }
+
+  @media (max-width: 1000px) {
+    width: 47%;
+  }
+
+  @media (max-width: 880px) {
+    width: 60%;
+  }
+
+  @media (max-width: 700px) {
+    width: 75%;
+  }
+
+  @media (max-width: 550px) {
+    width: 85%;
+  }
+}
+
+.calc-head {
+  width: 100%;
+  height: 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+}
+
+.calc-title {
+  font-size: 2rem;
+  color: var(--white);
+  font-weight: 700;
+  text-transform: lowercase;
+}
+
+.theme-wrapper {
+  display: flex;
+  align-items: center;
+  width: 150px;
+}
+.theme-wrapper span {
+  color: var(--white);
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  padding-top: 1.2rem;
+  font-weight: 700;
+}
+
+.themes {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.theme-number {
+  padding-left: 0.6rem;
+  color: var(--white);
+  font-size: 0.7rem;
+  letter-spacing: 1.5rem;
+  text-align: right;
+  font-weight: 600;
+}
+
+.theme-group {
+  width: 90px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: hsl(223, 31%, 20%);
+  border-radius: 10vmax;
+  -webkit-border-radius: 10vmax;
+  -moz-border-radius: 10vmax;
+  -ms-border-radius: 10vmax;
+  -o-border-radius: 10vmax;
+}
+
+.theme-group div {
+  width: 17px;
+  height: 17px;
+
+  cursor: pointer;
+  border-radius: 10vmax;
+  -webkit-border-radius: 10vmax;
+  -moz-border-radius: 10vmax;
+  -ms-border-radius: 10vmax;
+  -o-border-radius: 10vmax;
+}
+
+.theme-1 {
+  background: var(--red);
+}
+
+.theme-2,
+.theme-3 {
+  background: none;
+}
+
+.calc-display {
+  width: 100%;
+  height: 130px;
+  padding: 2rem;
+  background: hsl(224, 36%, 15%);
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+
+  @media (max-width: 300px) {
+    height: 100px;
+  }
+}
+
+.display-text {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  color: var(--white);
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: right;
+
+  @media (max-width: 500px) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 380px) {
+    font-size: 1.2rem;
+  }
+}
+
+.calc-key {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: hsl(223, 31%, 20%);
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+
+  @media (max-width: 300px) {
+    padding: 1rem;
+  }
+}
+
+.key-series {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.key {
+  text-align: center;
+  background: var(--light-grayish-orange);
+  width: 80px;
+  height: 52px;
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--very-dark-grayish-blue);
+  cursor: pointer;
+  box-shadow: 0px 2px 0px 1px rgba(166, 157, 145, 0.66);
+  -webkit-box-shadow: 0px 2px 0px 1px rgba(166, 157, 145, 0.66);
+  -moz-box-shadow: 0px 2px 0px 1px rgba(166, 157, 145, 0.66);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+
+  @media (max-width: 500px) {
+    width: 60px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 380px) {
+    width: 50px;
+
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 300px) {
+    font-size: 0.8rem;
+    width: 40px;
+    height: 45px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+  }
+}
+
+.del,
+.reset {
+  background: hsl(225, 21%, 49%);
+  color: var(--white) !important;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  box-shadow: 0px 2px 0px 1px hsl(224, 28%, 35%);
+  -webkit-box-shadow: 0px 2px 0px 1px hsl(224, 28%, 35%);
+  -moz-box-shadow: 0px 2px 0px 1px hsl(224, 28%, 35%);
+
+  @media (max-width: 500px) {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 380px) {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 300px) {
+    font-size: 0.8rem;
+  }
+}
+
+.reset {
+  width: 47%;
+}
+
+.equal {
+  width: 47% !important;
+  background: var(--red);
+  color: white;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 0px 1px var(--dark-red);
+  -webkit-box-shadow: 0 2px 0px 1px var(--dark-red);
+  -moz-box-shadow: 0 2px 0px 1px var(--dark-red);
+}

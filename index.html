@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calc-app" id="app">
+      <div class="calc-area">
+        <div class="calc-head">
+          <p class="calc-title" id="calc-title">CALC</p>
+          <div class="theme-wrapper">
+            <span class="t-text" id="t-text">THEME</span>
+            <div class="themes">
+              <p class="theme-number" id="theme-number">123</p>
+              <div class="theme-group" id="theme-group">
+                <div class="theme-1" id="theme-1"></div>
+                <div class="theme-2" id="theme-2"></div>
+                <div class="theme-3" id="theme-3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="calc-display" id="dpDiv">
+          <input class="display-text" id="display" type="text" name="display" />
+        </div>
+        <div class="calc-key" id="keyList">
+          <div class="key-series">
+            <input
+              type="button"
+              class="key"
+              value="7"
+              onclick="display.value += '7' "
+            />
+            <input
+              type="button"
+              class="key"
+              value="8"
+              onclick="display.value += '8' "
+            />
+            <input
+              type="button"
+              class="key"
+              value="9"
+              onclick="display.value += '9' "
+            />
+            <input
+              type="button"
+              class="key del"
+              id="del"
+              value="DEL"
+              onclick="display.value = display.value.toString().slice(0,-1)"
+            />
+          </div>
+          <div class="key-series">
+            <input
+              type="button"
+              class="key"
+              value="4"
+              onclick="display.value += '4' "
+            />
+            <input
+              type="button"
+              class="key"
+              value="5"
+              onclick="display.value += '5' "
+            />
+            <input
+              type="button"
+              class="key"
+              value="6"
+              onclick="display.value += '6' "
+            />
+            <input
+              type="button"
+              class="key"
+              value="+"
+              onclick="display.value += '+' "
+            />
+          </div>
+          <div class="key-series">
+            <input
+              type="button"
+              class="key"
+              value="1"
+              onclick="display.value += '1' "
+            />
+            <input
+              type="button"
+              class="key"
+              value="2"
+              onclick="display.value += '2' "
+            />
+            <input
+              type="button"
+              class="key"
+              value="3"
+              onclick="display.value += '3' "
+            />
+            <input
+              type="button"
+              class="key"
+              value="-"
+              onclick="display.value += '-' "
+            />
+          </div>
+          <div class="key-series">
+            <input
+              type="button"
+              class="key"
+              value="."
+              onclick="display.value += '.' "
+            />
+            <input
+              type="button"
+              class="key"
+              value="0"
+              onclick="display.value += '0' "
+            />
+            <input
+              type="button"
+              class="key"
+              value="/"
+              onclick="display.value += '/' "
+            />
+            <input
+              type="button"
+              class="key"
+              value="*"
+              onclick="display.value += '*' "
+            />
+          </div>
+          <div class="key-series">
+            <input
+              type="button"
+              class="key reset"
+              id="reset"
+              value="RESET"
+              onclick="display.value = ' '  "
+            />
+            <input
+              type="button"
+              class="key equal"
+              id="equal"
+              value="="
+              onclick="display.value = eval(display.value)"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Sagor Mohammed Yusuf</a>.
+  </div> -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
