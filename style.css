@@ -132,7 +132,7 @@ body {
 
 .calc-area {
   width: 27%;
-  height: 80dvh;
+  height: 70dvh;
 
   @media (max-width: 1550px) {
     width: 35%;
